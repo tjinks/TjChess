@@ -8,11 +8,13 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    @IBOutlet private weak var boardView: BoardView!
+    
+    private var eventHandler: ViewEventHandler?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        eventHandler = ViewEventHandler(self)
     }
 
     override var representedObject: Any? {
@@ -20,7 +22,24 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
+    
+    private class ViewEventHandler : EventHandler {
+        private weak var viewController: ViewController?
+        
+        init(_ viewController: ViewController) {
+            self.viewController = viewController
+            super.init()
+        }
+        
+        override public func processEvent(_ event: Event) -> Bool {
+            switch event {
+            case .showPosition(let position):
+                viewController!.boardView.position = position
+                return true
+            default:
+                return false
+            }
+        }
+    }
 }
 
