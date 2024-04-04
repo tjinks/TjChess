@@ -7,30 +7,23 @@
 
 import Cocoa
 
-class BoardView: NSView {
-    private var _position: Position = Position()
-    private var _highlights: [Square] = []
+class BoardView: EventHandlingView {
     
-    var position: Position {
-        get {
-            return _position
-        }
-        
-        set(value) {
-            _position = value
-            setNeedsDisplay(bounds)
+    private var gameState = GameStateDto()
+    private var highlights: [Int] = []
+    
+    override func processEvent(_ event: Event) {
+        switch event {
+        case .showGameState(let state):
+            setGameState(state)
+        default:
+            break
         }
     }
-    
-    var highlights: [Square] {
-        get {
-            return _highlights
-        }
-        
-        set(value) {
-            _highlights = value
-            setNeedsDisplay(bounds)
-        }
+
+    func setGameState(_ dto: GameStateDto) {
+        gameState = dto
+        setNeedsDisplay(self.bounds)
     }
     
     override func draw(_ dirtyRect: NSRect) {
@@ -39,10 +32,9 @@ class BoardView: NSView {
         if let ctx = NSGraphicsContext.current?.cgContext {
             ctx.saveGState()
             ctx.scaleBy(x: scale, y: scale)
-            for rank in 0...7 {
-                for file in 0...7 {
-                    drawPiece(context: ctx, square: try! Square(file: file, rank: rank))
-                }
+            try! forAllSquares() {
+                drawPiece(context: ctx, square: $0)
+                return true
             }
             
             ctx.restoreGState()
@@ -55,39 +47,71 @@ class BoardView: NSView {
     }
     
     @objc private func boardClicked(sender: NSClickGestureRecognizer) {
-        print("Called!")
+        let whereClicked = sender.location(in: self)
+        if let square = pointToSquare(whereClicked) {
+            raiseEvent(.squareClicked(square: square))
+        }
     }
     
-    private func drawPiece(context: CGContext, square: Square) {
+    private func pointToSquare(_ point: NSPoint) -> Int? {
+        let squareSize = BoardView.squareSize
+        let scale = getScale()
+        var result: Int? = nil
+        try! forAllSquares() {
+            let squareLocation = BoardView.squareToPoint($0)
+            let dx = (point.x - squareLocation.x) / scale
+            let dy = (point.y - squareLocation.y) / scale
+            if dx > 0.0 && dx < squareSize {
+                if dy > 0.0 && dy < squareSize {
+                    result = $0
+                    return false
+                }
+            }
+            
+            return true
+        }
+        
+        return result
+    }
+    
+    private static func squareToPoint(_ square: Int) -> CGPoint {
         let squareSize = BoardView.squareSize
         let x = Double(square.file) * (squareSize - 1)
         let y = Double(square.rank) * (squareSize - 1)
-        var assetName = getAssetName(for: position.getPiece(at: square), on: square)
+        return CGPoint(x: x, y: y)
+    }
+    
+    private func drawPiece(context: CGContext, square: Int) {
+        let squareSize = BoardView.squareSize
+        let location = BoardView.squareToPoint(square)
+        var assetName = getAssetName(for: gameState.board[square], on: square)
         if highlights.contains(square) {
             assetName = assetName + "H"
         }
         
         if let image = BoardView.getImage(assetName) {
-            context.draw(image, in: CGRect(origin: CGPoint(x: x, y: y), size: CGSize(width: squareSize, height: squareSize)))
+            context.draw(image, in: CGRect(origin: location, size: CGSize(width: squareSize, height: squareSize)))
         }
     }
     
-    private func getAssetName(for piece: Piece, on square: Square) -> String {
+    private func getAssetName(for piece: Piece, on square: Int) -> String {
         let squareColour = (square.rank + square.file) % 2 == 0 ? "B" : "W"
         return {
-            switch piece {
-            case .king(let owner):
-                return playerColour(owner) + "K"
-            case .queen(let owner):
-                return playerColour(owner) + "Q"
-            case .rook(let owner):
-                return playerColour(owner) + "R"
-            case .bishop(let owner):
-                return playerColour(owner) + "B"
-            case .knight(let owner):
-                return playerColour(owner) + "N"
-            case .pawn(let owner):
-                return playerColour(owner) + "P"
+            let owner = piece.owner
+            let type = piece.type
+            switch type {
+            case .king:
+                return playerColour(owner!) + "K"
+            case .queen:
+                return playerColour(owner!) + "Q"
+            case .rook:
+                return playerColour(owner!) + "R"
+            case .bishop:
+                return playerColour(owner!) + "B"
+            case .knight:
+                return playerColour(owner!) + "N"
+            case .pawn:
+                return playerColour(owner!) + "P"
             case .none:
                 return "E"
             }
@@ -107,11 +131,15 @@ class BoardView: NSView {
     }
     
     private func getScale() -> Double {
+        /*
         let squareSize = BoardView.squareSize
         let boardSize = 8 * (squareSize - 1) + 1
         let available = min(bounds.width, bounds.height)
         let result = available / boardSize
         return min(result, 1.5)
+         */
+        
+        return 1.0
     }
     
     private static var squareSize: Double {

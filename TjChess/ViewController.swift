@@ -8,37 +8,16 @@
 import Cocoa
 
 class ViewController: NSViewController {
-    @IBOutlet private weak var boardView: BoardView!
-    
-    private var eventHandler: ViewEventHandler?
-    
+    @IBOutlet private weak var boardView: BoardView?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventHandler = ViewEventHandler(self)
+        boardView!.installClickHandler()
     }
 
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
-        }
-    }
-    
-    private class ViewEventHandler : EventHandler {
-        private weak var viewController: ViewController?
-        
-        init(_ viewController: ViewController) {
-            self.viewController = viewController
-            super.init()
-        }
-        
-        override public func processEvent(_ event: Event) -> Bool {
-            switch event {
-            case .showPosition(let position):
-                viewController!.boardView.position = position
-                return true
-            default:
-                return false
-            }
         }
     }
 }

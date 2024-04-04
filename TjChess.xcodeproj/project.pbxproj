@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA0277442BB86C6200253958 /* EventHandlingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0277432BB86C6200253958 /* EventHandlingView.swift */; };
 		EA2186E32B8D3CB100C50DD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2186E22B8D3CB100C50DD8 /* AppDelegate.swift */; };
 		EA2186E52B8D3CB100C50DD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2186E42B8D3CB100C50DD8 /* ViewController.swift */; };
 		EA2186E72B8D3CB200C50DD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2186E62B8D3CB200C50DD8 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA0277432BB86C6200253958 /* EventHandlingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandlingView.swift; sourceTree = "<group>"; };
 		EA2186DF2B8D3CB100C50DD8 /* TjChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TjChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2186E22B8D3CB100C50DD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA2186E42B8D3CB100C50DD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				EA2186E82B8D3CB200C50DD8 /* Main.storyboard */,
 				EA2186EB2B8D3CB200C50DD8 /* TjChess.entitlements */,
 				EA802D142B932AE700AA8786 /* ChessLibAliases.swift */,
+				EA0277432BB86C6200253958 /* EventHandlingView.swift */,
 			);
 			path = TjChess;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				EA21870E2B8D3DB600C50DD8 /* BoardView.swift in Sources */,
 				EA2186E52B8D3CB100C50DD8 /* ViewController.swift in Sources */,
+				EA0277442BB86C6200253958 /* EventHandlingView.swift in Sources */,
 				EA2186E32B8D3CB100C50DD8 /* AppDelegate.swift in Sources */,
 				EA802D152B932AE700AA8786 /* ChessLibAliases.swift in Sources */,
 			);

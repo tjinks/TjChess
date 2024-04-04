@@ -10,11 +10,11 @@ import ChessLib
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    let dispatcher = EventDispatcher()
     
     @IBAction func computerPlaysWhite(_ sender: Any) {
-        let position = try! Notation.parseFen(fen: "k1K5/8/8/8/8/8/8/8 w");
-        getEventDispatcher().dispatch(.showPosition(position: position))
+        let gameStateDto = try! Notation.parseFen(fen: "k1K5/8/8/8/8/8/8/8 w");
+        dispatcher.dispatch(.showGameState(state: gameStateDto))
     }
     
     @IBAction func computerPlaysBlack(_ sender: Any) {
@@ -28,7 +28,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        _ = GameController(dispatcher: dispatcher)
+        dispatcher.dispatch(.setGameState(fen: "k7/8/K7/8/8/8/8/8 w"))
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -38,7 +39,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
     }
+}
 
-
+func getDispatcher() -> EventDispatcher {
+    let app = NSApplication.shared.delegate as! AppDelegate
+    return app.dispatcher
 }
 
