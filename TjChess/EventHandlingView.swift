@@ -15,10 +15,10 @@ class EventHandlingView: NSView, EventHandler {
         handler = Handler(view: self)
     }
     
-    func processEvent(_ event: Event) {
+    func processEvent(_ event: Any) {
     }
     
-    func raiseEvent(_ event: Event) {
+    func raiseEvent(_ event: Any) {
         handler!.raiseEvent(event)
     }
 
@@ -30,7 +30,7 @@ class EventHandlingView: NSView, EventHandler {
             self.view = view
         }
         
-        override func processEvent(_ event: Event) {
+        override func processEvent(_ event: Any) {
             view?.processEvent(event)
         }
     }

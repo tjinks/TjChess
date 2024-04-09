@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func computerPlaysWhite(_ sender: Any) {
         let gameStateDto = try! Notation.parseFen(fen: "k1K5/8/8/8/8/8/8/8 w");
-        dispatcher.dispatch(.showGameState(state: gameStateDto))
+        dispatcher.dispatch(UiEvent.showGameState(state: gameStateDto))
     }
     
     @IBAction func computerPlaysBlack(_ sender: Any) {
@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         _ = GameController(dispatcher: dispatcher)
-        dispatcher.dispatch(.setGameState(fen: "k7/8/K7/8/8/8/8/8 w"))
+        dispatcher.dispatch(SetGameState(fen: "k7/8/K7/8/8/8/8/8 w"))
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -12,12 +12,14 @@ class BoardView: EventHandlingView {
     private var gameState = GameStateDto()
     private var highlights: [Int] = []
     
-    override func processEvent(_ event: Event) {
-        switch event {
-        case .showGameState(let state):
-            setGameState(state)
-        default:
-            break
+    override func processEvent(_ event: Any) {
+        if let uiEvent = event as? UiEvent {
+            switch uiEvent {
+            case .showGameState(let state):
+                setGameState(state)
+            default:
+                break
+            }
         }
     }
 
@@ -49,7 +51,7 @@ class BoardView: EventHandlingView {
     @objc private func boardClicked(sender: NSClickGestureRecognizer) {
         let whereClicked = sender.location(in: self)
         if let square = pointToSquare(whereClicked) {
-            raiseEvent(.squareClicked(square: square))
+            raiseEvent(SquareClicked(square: square))
         }
     }
     

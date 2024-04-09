@@ -11,10 +11,11 @@ import ChessLib
 typealias GameStateDto = ChessLib.GameStateDto
 typealias Piece = ChessLib.Piece
 typealias Player = ChessLib.Player
-typealias Event = ChessLib.Event
+typealias UiEvent = ChessLib.UiEvent
 typealias EventHandler = ChessLib.EventHandler
 typealias EventHandlerBase = ChessLib.EventHandlerBase
 typealias EventDispatcher = ChessLib.EventDispatcher
 typealias Notation = ChessLib.Notation
+typealias SquareClicked = ChessLib.SquareClicked
 
 let forAllSquares = ChessLib.forAllSquares
