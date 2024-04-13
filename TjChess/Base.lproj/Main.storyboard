@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
+        <capability name="Combo buttons" minToolsVersion="14.0" minSystemVersion="13.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -107,16 +108,16 @@
             </objects>
             <point key="canvasLocation" x="50" y="252"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="TjChess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="GameViewController" customModule="TjChess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="419" height="566"/>
+                        <rect key="frame" x="0.0" y="0.0" width="535" height="566"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cf8-Nz-YmJ" userLabel="Main Stack View">
-                                <rect key="frame" x="0.0" y="65" width="1136" height="501"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cf8-Nz-YmJ" userLabel="Main Stack View">
+                                <rect key="frame" x="0.0" y="65" width="535" height="501"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="4NR-SN-yFK" customClass="BoardView" customModule="TjChess" customModuleProvider="target">
                                         <rect key="frame" x="10" y="91" width="400" height="400"/>
@@ -133,35 +134,65 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="15O-d3-KQh" userLabel="FEN Edit">
-                                        <rect key="frame" x="10" y="38" width="1126" height="21"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="sZx-IC-4uv">
-                                            <font key="font" usesAppearanceFont="YES"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NMo-zL-nR2">
-                                        <rect key="frame" x="10" y="10" width="1116" height="20"/>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMN-qt-Nhc">
+                                        <rect key="frame" x="10" y="38" width="525" height="21"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-Am-Bai">
-                                                <rect key="frame" x="-7" y="-7" width="107" height="32"/>
-                                                <buttonCell key="cell" type="push" title="Set Position" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WKp-Hi-zPC">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                            </button>
+                                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="15O-d3-KQh" userLabel="FEN Edit">
+                                                <rect key="frame" x="0.0" y="0.0" width="420" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="420" id="QPr-cO-B52"/>
+                                                </constraints>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="sZx-IC-4uv">
+                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <comboButton verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="center" title="Start Game" imageScaling="proportionallyDown" translatesAutoresizingMaskIntoConstraints="NO" id="JX3-4D-AAO">
+                                                <rect key="frame" x="425" y="-1" width="103" height="24"/>
+                                                <menu key="menu" id="s3J-Jo-6ng">
+                                                    <items>
+                                                        <menuItem title="Human (W) vs Computer (B)" id="P37-QT-7kQ" userLabel="HvC"/>
+                                                        <menuItem title="Computer (W) vs Human (B)" id="Cit-ft-ALD" userLabel="CvH"/>
+                                                        <menuItem title="Human vs Human" id="4tf-TV-VUM" userLabel="HvH">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                            <connections>
+                                                                <action selector="humanVsHumanClicked:" target="XfG-lQ-9wD" id="7kd-eb-sIi"/>
+                                                            </connections>
+                                                        </menuItem>
+                                                        <menuItem title="Computer vs Computer" id="eO2-6Q-uRD" userLabel="CvC">
+                                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                                        </menuItem>
+                                                    </items>
+                                                </menu>
+                                                <connections>
+                                                    <action selector="startGameClicked:" target="XfG-lQ-9wD" id="p2k-mN-Tvs"/>
+                                                </connections>
+                                            </comboButton>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NMo-zL-nR2">
+                                        <rect key="frame" x="10" y="10" width="515" height="20"/>
+                                        <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rIi-p3-Qwi">
-                                                <rect key="frame" x="94" y="-7" width="121" height="32"/>
+                                                <rect key="frame" x="-7" y="-7" width="121" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Reset Position" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VUu-0w-Unf">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                             </button>
                                             <box horizontalHuggingPriority="25" translatesAutoresizingMaskIntoConstraints="NO" id="z2b-28-GWD">
-                                                <rect key="frame" x="213" y="0.0" width="896" height="20"/>
+                                                <rect key="frame" x="112" y="0.0" width="396" height="20"/>
                                                 <view key="contentView" id="xaM-n4-fco">
-                                                    <rect key="frame" x="4" y="5" width="888" height="0.0"/>
+                                                    <rect key="frame" x="4" y="5" width="388" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </view>
                                             </box>
@@ -170,10 +201,8 @@
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
-                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
@@ -194,14 +223,21 @@
                                 </customSpacing>
                             </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="cf8-Nz-YmJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="QFh-rQ-EaT"/>
+                            <constraint firstAttribute="trailing" secondItem="cf8-Nz-YmJ" secondAttribute="trailing" id="QMF-DR-mVB"/>
+                            <constraint firstAttribute="trailing" secondItem="cf8-Nz-YmJ" secondAttribute="trailing" id="VMf-zb-RQa"/>
+                            <constraint firstItem="cf8-Nz-YmJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="zZP-lV-pUy"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="boardView" destination="4NR-SN-yFK" id="lRk-h2-3n5"/>
+                        <outlet property="fenEdit" destination="15O-d3-KQh" id="0kc-zB-hMk"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-299" y="897"/>
+            <point key="canvasLocation" x="-660.5" y="897"/>
         </scene>
     </scenes>
 </document>

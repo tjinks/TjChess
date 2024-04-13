@@ -29,17 +29,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         _ = GameController(dispatcher: dispatcher)
-        dispatcher.dispatch(SetGameState(fen: "k7/8/K7/8/8/8/8/8 w"))
+        dispatcher.dispatch(SetGameState(fen: Notation.initialPosition))
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        dispatcher.dispatch(ShutdownInProgress())
     }
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
     }
 }
+
 
 func getDispatcher() -> EventDispatcher {
     let app = NSApplication.shared.delegate as! AppDelegate

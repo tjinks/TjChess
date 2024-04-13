@@ -17,5 +17,7 @@ typealias EventHandlerBase = ChessLib.EventHandlerBase
 typealias EventDispatcher = ChessLib.EventDispatcher
 typealias Notation = ChessLib.Notation
 typealias SquareClicked = ChessLib.SquareClicked
+typealias SetGameState = ChessLib.SetGameState
+typealias RunMode = ChessLib.RunMode
 
 let forAllSquares = ChessLib.forAllSquares
