@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func computerPlaysWhite(_ sender: Any) {
         let gameStateDto = try! Notation.parseFen(fen: "k1K5/8/8/8/8/8/8/8 w");
-        dispatcher.dispatch(UiEvent.showGameState(state: gameStateDto))
+        dispatcher.dispatch(GlobalEvent.showGameState(state: gameStateDto))
     }
     
     @IBAction func computerPlaysBlack(_ sender: Any) {
@@ -29,11 +29,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         _ = GameController(dispatcher: dispatcher)
-        dispatcher.dispatch(SetGameState(fen: Notation.initialPosition))
+        //dispatcher.dispatch(SetGameState(fen: Notation.initialPosition))
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        dispatcher.dispatch(ShutdownInProgress())
+        dispatcher.dispatch(GlobalEvent.shutdownInProgress)
     }
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {

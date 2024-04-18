@@ -7,22 +7,38 @@
 
 import Cocoa
 
-class GameViewController: NSViewController, EventHandler {
+class GameViewController: NSViewController {
     private let dispatcher: EventDispatcher
     
     required init?(coder: NSCoder) {
         dispatcher = getDispatcher()
         super.init(coder: coder)
-        dispatcher.register(self)
+        dispatcher.register(processEvent)
     }
     
     func processEvent(_ event: Any) {
-        if let uiEvent = event as? UiEvent {
-            switch uiEvent {
+        if let event = event as? GlobalEvent {
+            switch event {
             case .showError(let message):
                 let alert = NSAlert()
                 alert.messageText = message
                 alert.alertStyle = .warning
+                alert.runModal()
+                
+            case .gameOver(let result):
+                let alert = NSAlert()
+                alert.messageText = {
+                    switch result {
+                    case .blackWin:
+                        return "Black wins"
+                    case .whiteWin:
+                        return "White wins"
+                    default:
+                        return "Game drawn"
+                    }
+                }()
+                
+                alert.alertStyle = .informational
                 alert.runModal()
             default:
                 return
@@ -55,7 +71,10 @@ class GameViewController: NSViewController, EventHandler {
     }
     
     private func setPosition() {
-        getDispatcher().dispatch(SetGameState(fen: fenEdit.stringValue))
+        let dispatcher = getDispatcher()
+        dispatcher.dispatch(GlobalEvent.setGameState(fen: fenEdit.stringValue))
+        dispatcher.dispatch(GlobalEvent.setRunMode(runMode: .humanVsHuman))
+        dispatcher.dispatch(GlobalEvent.startGame)
     }
 }
 

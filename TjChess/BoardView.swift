@@ -7,16 +7,25 @@
 
 import Cocoa
 
-class BoardView: EventHandlingView {
+class BoardView: NSView {
     
     private var gameState = GameStateDto()
     private var highlights: [Int] = []
+    private let dispatcher = getDispatcher()
     
-    override func processEvent(_ event: Any) {
-        if let uiEvent = event as? UiEvent {
-            switch uiEvent {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        dispatcher.register(processEvent)
+    }
+    
+    func processEvent(_ event: Any) {
+        if let event = event as? GlobalEvent {
+            switch event {
             case .showGameState(let state):
                 setGameState(state)
+            case .showHighlights(let highlights):
+                self.highlights = highlights
+                setNeedsDisplay(self.bounds)
             default:
                 break
             }
@@ -25,6 +34,7 @@ class BoardView: EventHandlingView {
 
     func setGameState(_ dto: GameStateDto) {
         gameState = dto
+        highlights = []
         setNeedsDisplay(self.bounds)
     }
     
@@ -51,7 +61,7 @@ class BoardView: EventHandlingView {
     @objc private func boardClicked(sender: NSClickGestureRecognizer) {
         let whereClicked = sender.location(in: self)
         if let square = pointToSquare(whereClicked) {
-            raiseEvent(SquareClicked(square: square))
+            dispatcher.dispatch(GlobalEvent.squareClicked(square: square))
         }
     }
     
