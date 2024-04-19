@@ -87,11 +87,11 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller-->
+        <!--Game Window Controller Scene-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" userLabel="Game Window Controller Scene" sceneMemberID="viewController">
+                    <window key="window" title="Chess" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -107,6 +107,107 @@
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="50" y="252"/>
+        </scene>
+        <!--Promotion Window Controller-->
+        <scene sceneID="ACp-7S-Psg">
+            <objects>
+                <windowController storyboardIdentifier="promotionWindow" id="F6Q-ad-jUl" userLabel="Promotion Window Controller" customClass="PromotionWindowController" customModule="TjChess" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Promotion" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="F5S-9x-cjv">
+                        <windowStyleMask key="styleMask" titled="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="324" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <view key="contentView" id="hdz-Br-9Gj">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="F6Q-ad-jUl" id="n8f-Ec-v8Y"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="AHb-S9-RBw" kind="relationship" relationship="window.shadowedContentViewController" id="yn6-ps-tX3"/>
+                    </connections>
+                </windowController>
+                <customObject id="p6b-dm-1Pt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="648"/>
+        </scene>
+        <!--Promotion View Controller-->
+        <scene sceneID="p4b-R2-ion">
+            <objects>
+                <viewController id="AHb-S9-RBw" userLabel="Promotion View Controller" sceneMemberID="viewController">
+                    <view key="view" id="1lb-gE-3FV" customClass="PromotionView" customModule="TjChess" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="142" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xP-AT-zgj">
+                                <rect key="frame" x="47" y="25" width="49" height="220"/>
+                                <subviews>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="t47-uC-n8S">
+                                        <rect key="frame" x="0.0" y="171" width="49" height="49"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="BQW" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ljK-ld-lyW">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="queenSelected:" target="1lb-gE-3FV" id="t1Y-rs-UKf"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="cJD-aX-lbQ">
+                                        <rect key="frame" x="0.0" y="114" width="49" height="49"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="BRW" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="nGo-j9-v3C">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="rookSelected:" target="1lb-gE-3FV" id="Afh-tw-8M8"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="uSW-oZ-Izu">
+                                        <rect key="frame" x="0.0" y="57" width="49" height="49"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="BNW" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="gMq-57-dpH">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="knightSelected:" target="1lb-gE-3FV" id="0XW-3u-Nzb"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="R6H-w4-Gbz">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="BBW" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="TNN-Q0-9bL">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="bishopSelected:" target="1lb-gE-3FV" id="IFr-m9-aT2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="5xP-AT-zgj" firstAttribute="centerY" secondItem="1lb-gE-3FV" secondAttribute="centerY" id="8i6-XT-adT"/>
+                            <constraint firstItem="5xP-AT-zgj" firstAttribute="centerX" secondItem="1lb-gE-3FV" secondAttribute="centerX" id="Z7t-Eb-Wfs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="sqd-vj-0ak" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="617"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -142,7 +243,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="420" id="QPr-cO-B52"/>
                                                 </constraints>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="sZx-IC-4uv">
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" allowsEditingTextAttributes="YES" id="sZx-IC-4uv">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -240,4 +341,10 @@
             <point key="canvasLocation" x="-660.5" y="897"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BBW" width="49" height="49"/>
+        <image name="BNW" width="49" height="49"/>
+        <image name="BQW" width="49" height="49"/>
+        <image name="BRW" width="49" height="49"/>
+    </resources>
 </document>

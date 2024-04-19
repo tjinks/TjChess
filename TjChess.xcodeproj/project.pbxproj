@@ -16,6 +16,8 @@
 		EA2187012B8D3CB300C50DD8 /* TjChessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2187002B8D3CB300C50DD8 /* TjChessUITestsLaunchTests.swift */; };
 		EA21870E2B8D3DB600C50DD8 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA21870D2B8D3DB600C50DD8 /* BoardView.swift */; };
 		EA2187112B8E2FE800C50DD8 /* ChessLib in Frameworks */ = {isa = PBXBuildFile; productRef = EA2187102B8E2FE800C50DD8 /* ChessLib */; };
+		EA6DB0782BD1B2F8005CDCB3 /* PromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6DB0772BD1B2F8005CDCB3 /* PromotionView.swift */; };
+		EA6DB07A2BD1B553005CDCB3 /* PromotionWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6DB0792BD1B553005CDCB3 /* PromotionWindowController.swift */; };
 		EA802D152B932AE700AA8786 /* ChessLibAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802D142B932AE700AA8786 /* ChessLibAliases.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		EA2186FE2B8D3CB300C50DD8 /* TjChessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TjChessUITests.swift; sourceTree = "<group>"; };
 		EA2187002B8D3CB300C50DD8 /* TjChessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TjChessUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EA21870D2B8D3DB600C50DD8 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		EA6DB0772BD1B2F8005CDCB3 /* PromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionView.swift; sourceTree = "<group>"; };
+		EA6DB0792BD1B553005CDCB3 /* PromotionWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionWindowController.swift; sourceTree = "<group>"; };
 		EA802D142B932AE700AA8786 /* ChessLibAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessLibAliases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +112,8 @@
 				EA2186E82B8D3CB200C50DD8 /* Main.storyboard */,
 				EA2186EB2B8D3CB200C50DD8 /* TjChess.entitlements */,
 				EA802D142B932AE700AA8786 /* ChessLibAliases.swift */,
+				EA6DB0772BD1B2F8005CDCB3 /* PromotionView.swift */,
+				EA6DB0792BD1B553005CDCB3 /* PromotionWindowController.swift */,
 			);
 			path = TjChess;
 			sourceTree = "<group>";
@@ -265,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6DB0782BD1B2F8005CDCB3 /* PromotionView.swift in Sources */,
 				EA21870E2B8D3DB600C50DD8 /* BoardView.swift in Sources */,
 				EA2186E52B8D3CB100C50DD8 /* GameViewController.swift in Sources */,
+				EA6DB07A2BD1B553005CDCB3 /* PromotionWindowController.swift in Sources */,
 				EA2186E32B8D3CB100C50DD8 /* AppDelegate.swift in Sources */,
 				EA802D152B932AE700AA8786 /* ChessLibAliases.swift in Sources */,
 			);

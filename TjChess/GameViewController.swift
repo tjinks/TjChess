@@ -40,6 +40,10 @@ class GameViewController: NSViewController {
                 
                 alert.alertStyle = .informational
                 alert.runModal()
+                
+            case .showPromotionDialog:
+                showPromotionView()
+                
             default:
                 return
             }
@@ -47,7 +51,7 @@ class GameViewController: NSViewController {
     }
     
     @IBOutlet private weak var boardView: BoardView?
-        
+    
     @IBOutlet private weak var fenEdit: NSTextField!
     
     override func viewDidLoad() {
@@ -55,10 +59,10 @@ class GameViewController: NSViewController {
         boardView!.installClickHandler()
         fenEdit.stringValue = Notation.initialPosition
     }
-
+    
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
     
@@ -75,6 +79,15 @@ class GameViewController: NSViewController {
         dispatcher.dispatch(GlobalEvent.setGameState(fen: fenEdit.stringValue))
         dispatcher.dispatch(GlobalEvent.setRunMode(runMode: .humanVsHuman))
         dispatcher.dispatch(GlobalEvent.startGame)
+    }
+    
+    private func showPromotionView() {
+        let secondaryWindowController: NSWindowController? = storyboard?.instantiateController<NSWindowController>(identifier: "promotionWindow") {
+            coder in return nil
+        }
+        
+        let window = secondaryWindowController!.window!
+        NSApp.runModal(for: window)
     }
 }
 
