@@ -253,7 +253,11 @@
                                                 <rect key="frame" x="425" y="-1" width="103" height="24"/>
                                                 <menu key="menu" id="s3J-Jo-6ng">
                                                     <items>
-                                                        <menuItem title="Human (W) vs Computer (B)" id="P37-QT-7kQ" userLabel="HvC"/>
+                                                        <menuItem title="Human (W) vs Computer (B)" id="P37-QT-7kQ" userLabel="HvC">
+                                                            <connections>
+                                                                <action selector="humanVsComputerClicked:" target="XfG-lQ-9wD" id="if4-zP-NYE"/>
+                                                            </connections>
+                                                        </menuItem>
                                                         <menuItem title="Computer (W) vs Human (B)" id="Cit-ft-ALD" userLabel="CvH"/>
                                                         <menuItem title="Human vs Human" id="4tf-TV-VUM" userLabel="HvH">
                                                             <modifierMask key="keyEquivalentModifierMask"/>

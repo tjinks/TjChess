@@ -236,8 +236,8 @@
             filePath = "../../../Packages/ChessLib/Sources/ChessLib/common/GameController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "playingHumanVsHuman(event:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -252,25 +252,9 @@
             filePath = "../../../Packages/ChessLib/Sources/ChessLib/common/GameController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "processEvent(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "63C8A1E5-0F94-480A-BA0B-C33FF58EEFD0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../Packages/ChessLib/Sources/ChessLib/common/GameController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "notPlaying(event:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -284,8 +268,8 @@
             filePath = "../../../Packages/ChessLib/Sources/ChessLib/common/GameController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "playingHumanVsHuman(event:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -336,6 +320,751 @@
                   offsetFromSymbolStart = "1080">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "207A2BF3-7C9E-499A-8DD2-EAB720171435"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "selectMove(gameState:observer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C64E7391-EB6D-473F-897E-5707F5BBB682"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "checkTerminal(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D36D3F83-8A1A-47EC-B945-2F6C5BEE8989"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/BasicEndgameEvaluators.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "isApplicable(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "534CBE13-BA97-4910-8C0D-E851F8A3534B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/BasicEndgameEvaluators.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "isApplicable(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF7AC22D-4639-4A8E-8484-2682019B7B8B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/BasicEndgameEvaluators.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "evaluate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8733F714-9CAD-4384-BE41-500C81818A32"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "analyse(gameState:observer:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8733F714-9CAD-4384-BE41-500C81818A32 - eaac1f254f4d401"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.Aba.analyse(gameState: ChessLib.GameState, observer: ChessLib.MoveSelectionObserver) throws -&gt; Swift.Double"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "2764">
+               </Location>
+               <Location
+                  uuid = "8733F714-9CAD-4384-BE41-500C81818A32 - eaac1f254f4d401"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.Aba.analyse(gameState: ChessLib.GameState, observer: ChessLib.MoveSelectionObserver) throws -&gt; Swift.Double"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "2752">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00206A1D-237D-4235-AD57-1C9D06679C41"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "analyse(gameState:observer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82B30682-F6F1-463B-A246-F97F5FB07774"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "analyse(gameState:observer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98A89309-7294-4045-9EE3-2ACA1708C5BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/BasicEndgameEvaluators.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "isApplicable(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "158DA3A4-4EAA-4C61-A18E-BC4E0BDDC72C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Evaluator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "evaluateMaterial(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80695171-685C-416A-8D3D-11AF6C97572B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Evaluator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "evaluateMaterial(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BEAFB61-E4AA-418C-A76B-B3CD11622321"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "analyse(gameState:observer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8EC9C151-8928-49C6-82A5-D5A651155BA4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/BasicEndgameEvaluators.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "isApplicable(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F188D41-BE81-4F56-9601-6C2F2489719B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/BasicEndgameEvaluators.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "isApplicable(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2677FA4D-0FAC-4ED4-A0EA-50C331943112"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/BasicEndgameEvaluators.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "isApplicable(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC967420-A9FC-471B-A2A3-BC0EE8D47905"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/BasicEndgameEvaluators.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "isApplicable(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BC967420-A9FC-471B-A2A3-BC0EE8D47905 - 6f16fb26639577d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.MajorPieceAndKingVsKingEvaluator.isApplicable(ChessLib.AnalysisInfo) -&gt; Swift.Bool"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/BasicEndgameEvaluators.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "BC967420-A9FC-471B-A2A3-BC0EE8D47905 - 6f16fb26639577d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.MajorPieceAndKingVsKingEvaluator.isApplicable(ChessLib.AnalysisInfo) -&gt; Swift.Bool"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/BasicEndgameEvaluators.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "340">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86B5FFDB-39FD-40E6-B349-BAF292D089DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "checkTerminal(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2AFA1138-C2B2-4845-8DFC-0807A4FAA58B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "analyse(gameState:observer:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2AFA1138-C2B2-4845-8DFC-0807A4FAA58B - eaac1f254f4d1ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.Aba.analyse(gameState: ChessLib.GameState, observer: ChessLib.MoveSelectionObserver) throws -&gt; Swift.Double"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "1100">
+               </Location>
+               <Location
+                  uuid = "2AFA1138-C2B2-4845-8DFC-0807A4FAA58B - eaac1f254f4d1ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.Aba.analyse(gameState: ChessLib.GameState, observer: ChessLib.MoveSelectionObserver) throws -&gt; Swift.Double"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "1144">
+               </Location>
+               <Location
+                  uuid = "2AFA1138-C2B2-4845-8DFC-0807A4FAA58B - eaac1f254f4d1d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.Aba.analyse(gameState: ChessLib.GameState, observer: ChessLib.MoveSelectionObserver) throws -&gt; Swift.Double"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "1100">
+               </Location>
+               <Location
+                  uuid = "2AFA1138-C2B2-4845-8DFC-0807A4FAA58B - eaac1f254f4d1d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.Aba.analyse(gameState: ChessLib.GameState, observer: ChessLib.MoveSelectionObserver) throws -&gt; Swift.Double"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "1144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF6A5123-F661-4698-858E-566B8957D441"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "checkTerminal(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EF6A5123-F661-4698-858E-566B8957D441 - b7a9721ad97d9793"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.Aba.checkTerminal(ChessLib.AnalysisInfo) -&gt; Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "EF6A5123-F661-4698-858E-566B8957D441 - b7a9721ad97d97f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.Aba.checkTerminal(ChessLib.AnalysisInfo) -&gt; Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "336">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31DC0FFB-7208-4FB3-826B-0AC5662FD324"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/AnalysisInfo.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "countPieces(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C03ECE5-E1CB-4E6A-AA2B-288CB433530E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/EvaluationSupport.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "evaluateMaterial(_:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "0C03ECE5-E1CB-4E6A-AA2B-288CB433530E - b642c96b4eadd4d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.evaluateMaterial(ChessLib.AnalysisInfo) -&gt; Swift.Double"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/EvaluationSupport.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "928">
+               </Location>
+               <Location
+                  uuid = "0C03ECE5-E1CB-4E6A-AA2B-288CB433530E - b642c96b4eadd4d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.evaluateMaterial(ChessLib.AnalysisInfo) -&gt; Swift.Double"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/EvaluationSupport.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "924">
+               </Location>
+               <Location
+                  uuid = "0C03ECE5-E1CB-4E6A-AA2B-288CB433530E - b642c96b4eadd727"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.evaluateMaterial(ChessLib.AnalysisInfo) -&gt; Swift.Double"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/EvaluationSupport.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "1184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "741A4919-1C34-4484-89C7-DDB727BE03E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/EvaluationSupport.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "evaluateMaterial(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A80BFE00-63A9-4FAC-AA36-0D96F7271897"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/MoveGenerator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "addMoves(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91A6B37E-AAB8-4EAA-841A-95B2D523438B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "checkTerminal(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "100AB833-818A-4629-A5D7-30FE22ADC005"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "checkTerminal(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FEB3E238-E436-4934-8989-F85059D566BC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "isQuietPosition(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FEB3E238-E436-4934-8989-F85059D566BC - b7a9721ad97d9310"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ChessLib.Aba.checkTerminal(ChessLib.AnalysisInfo) -&gt; Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
+                  offsetFromSymbolStart = "936">
+               </Location>
+               <Location
+                  uuid = "FEB3E238-E436-4934-8989-F85059D566BC - 7b5ce6a9ff6a6826"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ChessLib.Aba.isQuietPosition(ChessLib.AnalysisInfo) -&gt; Swift.Bool"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "FEB3E238-E436-4934-8989-F85059D566BC - 7b5ce6a9ff6a6883"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ChessLib.Aba.isQuietPosition(ChessLib.AnalysisInfo) -&gt; Swift.Bool"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "197"
+                  endingLineNumber = "197"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "FEB3E238-E436-4934-8989-F85059D566BC - 7b5ce6a9ff6a68a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ChessLib.Aba.isQuietPosition(ChessLib.AnalysisInfo) -&gt; Swift.Bool"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "FEB3E238-E436-4934-8989-F85059D566BC - 7b5ce6a9ff6a6941"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ChessLib.Aba.isQuietPosition(ChessLib.AnalysisInfo) -&gt; Swift.Bool"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "FEB3E238-E436-4934-8989-F85059D566BC - 7b5ce6a9ff6a68e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ChessLib.Aba.isQuietPosition(ChessLib.AnalysisInfo) -&gt; Swift.Bool"
+                  moduleName = "TjChess"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tony/Documents/XCode/Packages/ChessLib/Sources/ChessLib/engine/Aba.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C0B3007-A63F-4C3A-8252-F439DF5F5824"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/DefaultEvaluator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "evaluateMobility(analysisInfo:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A99CBE80-B245-488D-AC31-6A6416630057"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Packages/ChessLib/Sources/ChessLib/engine/DefaultEvaluator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "evaluateMobility(analysisInfo:for:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

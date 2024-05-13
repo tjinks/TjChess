@@ -58,6 +58,8 @@ class GameViewController: NSViewController {
         super.viewDidLoad()
         boardView!.installClickHandler()
         fenEdit.stringValue = Notation.initialPosition
+        //fenEdit.stringValue = "7k/8/8/4K3/8/8/8/rn6 w"
+        //fenEdit.stringValue = "k1b5/8/8/8/8/8/7P/K7 w"
     }
     
     override var representedObject: Any? {
@@ -71,13 +73,17 @@ class GameViewController: NSViewController {
     }
     
     @IBAction func humanVsHumanClicked(_ sender: Any) {
-        setPosition()
+        setPosition(runMode: .humanVsHuman)
     }
     
-    private func setPosition() {
+    @IBAction func humanVsComputerClicked(_ sender: Any) {
+        setPosition(runMode: .humanVsComputer)
+    }
+    
+    private func setPosition(runMode: RunMode) {
         let dispatcher = getDispatcher()
         dispatcher.dispatch(GlobalEvent.setGameState(fen: fenEdit.stringValue))
-        dispatcher.dispatch(GlobalEvent.setRunMode(runMode: .humanVsHuman))
+        dispatcher.dispatch(GlobalEvent.setRunMode(runMode: runMode))
         dispatcher.dispatch(GlobalEvent.startGame)
     }
     
