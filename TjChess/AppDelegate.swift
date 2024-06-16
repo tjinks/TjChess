@@ -6,7 +6,7 @@
 //
 
 import Cocoa
-import ChessLib
+import ChessBE
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {

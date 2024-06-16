@@ -6,7 +6,7 @@
 //
 
 import Cocoa
-import ChessLib
+import ChessBE
 
 class PromotionView: NSView {
     
@@ -26,7 +26,7 @@ class PromotionView: NSView {
         promoteTo(.bishop)
     }
     
-    private func promoteTo(_ pieceType: ChessLib.PieceType) {
+    private func promoteTo(_ pieceType: ChessBE.PieceType) {
         getDispatcher().dispatch(GlobalEvent.promoteTo(piece: pieceType))
         self.window?.close()
     }

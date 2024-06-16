@@ -6,16 +6,16 @@
 //
 
 import Foundation
-import ChessLib
+import ChessBE
 
-typealias GameStateDto = ChessLib.GameStateDto
-typealias Piece = ChessLib.Piece
-typealias Player = ChessLib.Player
-typealias GlobalEvent = ChessLib.GlobalEvent
-typealias EventHandler = ChessLib.EventHandler
-typealias EventDispatcher = ChessLib.EventDispatcher
-typealias Notation = ChessLib.Notation
-typealias SetGameState = ChessLib.SetGameState
-typealias RunMode = ChessLib.RunMode
+typealias GameStateDto = ChessBE.GameStateDto
+typealias Piece = ChessBE.Piece
+typealias Player = ChessBE.Player
+typealias GlobalEvent = ChessBE.GlobalEvent
+typealias EventHandler = ChessBE.EventHandler
+typealias EventDispatcher = ChessBE.EventDispatcher
+typealias Notation = ChessBE.Notation
+typealias SetGameState = ChessBE.SetGameState
+typealias RunMode = ChessBE.RunMode
 
-let forAllSquares = ChessLib.forAllSquares
+let forAllSquares = ChessBE.forAllSquares

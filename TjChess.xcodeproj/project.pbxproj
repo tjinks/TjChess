@@ -15,7 +15,7 @@
 		EA2186FF2B8D3CB300C50DD8 /* TjChessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2186FE2B8D3CB300C50DD8 /* TjChessUITests.swift */; };
 		EA2187012B8D3CB300C50DD8 /* TjChessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2187002B8D3CB300C50DD8 /* TjChessUITestsLaunchTests.swift */; };
 		EA21870E2B8D3DB600C50DD8 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA21870D2B8D3DB600C50DD8 /* BoardView.swift */; };
-		EA2187112B8E2FE800C50DD8 /* ChessLib in Frameworks */ = {isa = PBXBuildFile; productRef = EA2187102B8E2FE800C50DD8 /* ChessLib */; };
+		EA3D041D2BF7336500CC2DD0 /* libChessBE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3D03BD2BF6AEBE00CC2DD0 /* libChessBE.a */; };
 		EA6DB0782BD1B2F8005CDCB3 /* PromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6DB0772BD1B2F8005CDCB3 /* PromotionView.swift */; };
 		EA6DB07A2BD1B553005CDCB3 /* PromotionWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6DB0792BD1B553005CDCB3 /* PromotionWindowController.swift */; };
 		EA802D152B932AE700AA8786 /* ChessLibAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802D142B932AE700AA8786 /* ChessLibAliases.swift */; };
@@ -36,6 +36,27 @@
 			remoteGlobalIDString = EA2186DE2B8D3CB100C50DD8;
 			remoteInfo = TjChess;
 		};
+		EA3D03BC2BF6AEBE00CC2DD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA3D03B82BF6AEBE00CC2DD0 /* ChessBE.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA3D03B12BF6AEBE00CC2DD0;
+			remoteInfo = ChessBE;
+		};
+		EA3D041A2BF7335B00CC2DD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA3D03B82BF6AEBE00CC2DD0 /* ChessBE.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA3D03FB2BF6AFF600CC2DD0;
+			remoteInfo = ChessBETests;
+		};
+		EA5D54E42BFCE26A00F1BFB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA5D54DE2BFCE26900F1BFB8 /* ChessEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA5D54D72BFCE26900F1BFB8;
+			remoteInfo = ChessEngine;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +72,8 @@
 		EA2186FE2B8D3CB300C50DD8 /* TjChessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TjChessUITests.swift; sourceTree = "<group>"; };
 		EA2187002B8D3CB300C50DD8 /* TjChessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TjChessUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EA21870D2B8D3DB600C50DD8 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		EA3D03B82BF6AEBE00CC2DD0 /* ChessBE.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChessBE.xcodeproj; path = ../../ChessBE/ChessBE.xcodeproj; sourceTree = "<group>"; };
+		EA5D54DE2BFCE26900F1BFB8 /* ChessEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChessEngine.xcodeproj; path = ../../ChessEngine/ChessEngine.xcodeproj; sourceTree = "<group>"; };
 		EA6DB0772BD1B2F8005CDCB3 /* PromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionView.swift; sourceTree = "<group>"; };
 		EA6DB0792BD1B553005CDCB3 /* PromotionWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionWindowController.swift; sourceTree = "<group>"; };
 		EA802D142B932AE700AA8786 /* ChessLibAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessLibAliases.swift; sourceTree = "<group>"; };
@@ -61,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA2187112B8E2FE800C50DD8 /* ChessLib in Frameworks */,
+				EA3D041D2BF7336500CC2DD0 /* libChessBE.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,10 +108,13 @@
 		EA2186D62B8D3CB100C50DD8 = {
 			isa = PBXGroup;
 			children = (
+				EA5D54DE2BFCE26900F1BFB8 /* ChessEngine.xcodeproj */,
+				EA3D03B82BF6AEBE00CC2DD0 /* ChessBE.xcodeproj */,
 				EA2186E12B8D3CB100C50DD8 /* TjChess */,
 				EA2186F32B8D3CB300C50DD8 /* TjChessTests */,
 				EA2186FD2B8D3CB300C50DD8 /* TjChessUITests */,
 				EA2186E02B8D3CB100C50DD8 /* Products */,
+				EA3D041C2BF7336500CC2DD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +161,30 @@
 			path = TjChessUITests;
 			sourceTree = "<group>";
 		};
+		EA3D03B92BF6AEBE00CC2DD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA3D03BD2BF6AEBE00CC2DD0 /* libChessBE.a */,
+				EA3D041B2BF7335B00CC2DD0 /* ChessBETests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA3D041C2BF7336500CC2DD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA5D54DF2BFCE26900F1BFB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA5D54E52BFCE26A00F1BFB8 /* libChessEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,7 +202,6 @@
 			);
 			name = TjChess;
 			packageProductDependencies = (
-				EA2187102B8E2FE800C50DD8 /* ChessLib */,
 			);
 			productName = TjChess;
 			productReference = EA2186DF2B8D3CB100C50DD8 /* TjChess.app */;
@@ -231,6 +280,16 @@
 			);
 			productRefGroup = EA2186E02B8D3CB100C50DD8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EA3D03B92BF6AEBE00CC2DD0 /* Products */;
+					ProjectRef = EA3D03B82BF6AEBE00CC2DD0 /* ChessBE.xcodeproj */;
+				},
+				{
+					ProductGroup = EA5D54DF2BFCE26900F1BFB8 /* Products */;
+					ProjectRef = EA5D54DE2BFCE26900F1BFB8 /* ChessEngine.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EA2186DE2B8D3CB100C50DD8 /* TjChess */,
@@ -239,6 +298,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EA3D03BD2BF6AEBE00CC2DD0 /* libChessBE.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libChessBE.a;
+			remoteRef = EA3D03BC2BF6AEBE00CC2DD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EA3D041B2BF7335B00CC2DD0 /* ChessBETests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChessBETests.xctest;
+			remoteRef = EA3D041A2BF7335B00CC2DD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EA5D54E52BFCE26A00F1BFB8 /* libChessEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libChessEngine.a;
+			remoteRef = EA5D54E42BFCE26A00F1BFB8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EA2186DD2B8D3CB100C50DD8 /* Resources */ = {
@@ -615,13 +698,6 @@
 			relativePath = ../../../Packages/ChessLib;
 		};
 /* End XCLocalSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EA2187102B8E2FE800C50DD8 /* ChessLib */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ChessLib;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA2186D72B8D3CB100C50DD8 /* Project object */;
 }
