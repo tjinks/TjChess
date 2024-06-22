@@ -57,7 +57,7 @@ class GameViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         boardView!.installClickHandler()
-        fenEdit.stringValue = Notation.initialPosition
+        fenEdit.stringValue = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 100 1"
         //fenEdit.stringValue = "7k/8/8/4K3/8/8/8/rn6 w"
         //fenEdit.stringValue = "k1b5/8/8/8/8/8/7P/K7 w"
     }

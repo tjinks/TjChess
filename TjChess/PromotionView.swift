@@ -11,22 +11,22 @@ import ChessBE
 class PromotionView: NSView {
     
     @IBAction func queenSelected(_ sender: Any) {
-        promoteTo(.queen)
+        promoteTo(ChessBE.Queen)
     }
     
     @IBAction func rookSelected(_ sender: Any) {
-        promoteTo(.rook)
+        promoteTo(ChessBE.Rook)
     }
     
     @IBAction func knightSelected(_ sender: Any) {
-        promoteTo(.knight)
+        promoteTo(ChessBE.Knight)
     }
     
     @IBAction func bishopSelected(_ sender: Any) {
-        promoteTo(.bishop)
+        promoteTo(ChessBE.Bishop)
     }
     
-    private func promoteTo(_ pieceType: ChessBE.PieceType) {
+    private func promoteTo(_ pieceType: ChessBE.EngPieceType) {
         getDispatcher().dispatch(GlobalEvent.promoteTo(piece: pieceType))
         self.window?.close()
     }

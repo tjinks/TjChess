@@ -13,8 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let dispatcher = EventDispatcher()
     
     @IBAction func computerPlaysWhite(_ sender: Any) {
-        let gameStateDto = try! Notation.parseFen(fen: "k1K5/8/8/8/8/8/8/8 w");
-        dispatcher.dispatch(GlobalEvent.showGameState(state: gameStateDto))
+        let position = try! Position.parseFen(fen: "k1K5/8/8/8/8/8/8/8 w");
+        dispatcher.dispatch(GlobalEvent.showGameState(position: position))
     }
     
     @IBAction func computerPlaysBlack(_ sender: Any) {
