@@ -25,13 +25,13 @@ class GameViewController: NSViewController {
                 alert.alertStyle = .warning
                 alert.runModal()
                 
-            case .gameOver(let result):
+            case .gameOver(_, let winner):
                 let alert = NSAlert()
                 alert.messageText = {
-                    switch result {
-                    case .blackWin:
+                    switch winner {
+                    case Black:
                         return "Black wins"
-                    case .whiteWin:
+                    case White:
                         return "White wins"
                     default:
                         return "Game drawn"

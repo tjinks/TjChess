@@ -19,6 +19,7 @@
 		EA6DB0782BD1B2F8005CDCB3 /* PromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6DB0772BD1B2F8005CDCB3 /* PromotionView.swift */; };
 		EA6DB07A2BD1B553005CDCB3 /* PromotionWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6DB0792BD1B553005CDCB3 /* PromotionWindowController.swift */; };
 		EA802D152B932AE700AA8786 /* ChessLibAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA802D142B932AE700AA8786 /* ChessLibAliases.swift */; };
+		EAED40A72C524C0000540E7E /* libChessEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5D54E52BFCE26A00F1BFB8 /* libChessEngine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		EA6DB0772BD1B2F8005CDCB3 /* PromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionView.swift; sourceTree = "<group>"; };
 		EA6DB0792BD1B553005CDCB3 /* PromotionWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionWindowController.swift; sourceTree = "<group>"; };
 		EA802D142B932AE700AA8786 /* ChessLibAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessLibAliases.swift; sourceTree = "<group>"; };
+		EAED40A22C52460800540E7E /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAED40A72C524C0000540E7E /* libChessEngine.a in Frameworks */,
 				EA3D041D2BF7336500CC2DD0 /* libChessBE.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +141,7 @@
 		EA2186E12B8D3CB100C50DD8 /* TjChess */ = {
 			isa = PBXGroup;
 			children = (
+				EAED40A22C52460800540E7E /* BridgingHeader.h */,
 				EA21870D2B8D3DB600C50DD8 /* BoardView.swift */,
 				EA2186E22B8D3CB100C50DD8 /* AppDelegate.swift */,
 				EA2186E42B8D3CB100C50DD8 /* GameViewController.swift */,
@@ -562,6 +566,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.cleopatra.TjChess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = TjChess/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -589,6 +594,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.cleopatra.TjChess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = TjChess/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

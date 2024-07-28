@@ -6,10 +6,11 @@
 //
 
 import Cocoa
+import ChessBE
 
 class BoardView: NSView {
     
-    private var gameState = GameStateDto()
+    private var position = ChessBE.Position()
     private var highlights: [Int] = []
     private let dispatcher = getDispatcher()
     
@@ -21,8 +22,8 @@ class BoardView: NSView {
     func processEvent(_ event: Any) {
         if let event = event as? GlobalEvent {
             switch event {
-            case .showGameState(let state):
-                setGameState(state)
+            case .showGameState(let position):
+                setGameState(position)
             case .showHighlights(let highlights):
                 self.highlights = highlights
                 setNeedsDisplay(self.bounds)
@@ -32,8 +33,8 @@ class BoardView: NSView {
         }
     }
 
-    func setGameState(_ dto: GameStateDto) {
-        gameState = dto
+    func setGameState(_ position: Position) {
+        self.position = position
         highlights = []
         setNeedsDisplay(self.bounds)
     }
@@ -96,7 +97,7 @@ class BoardView: NSView {
     private func drawPiece(context: CGContext, square: Int) {
         let squareSize = BoardView.squareSize
         let location = BoardView.squareToPoint(square)
-        var assetName = getAssetName(for: gameState.board[square], on: square)
+        var assetName = getAssetName(for: position[square], on: square)
         if highlights.contains(square) {
             assetName = assetName + "H"
         }
@@ -106,33 +107,34 @@ class BoardView: NSView {
         }
     }
     
-    private func getAssetName(for piece: Piece, on square: Int) -> String {
+    private func getAssetName(for piece: EngPiece, on square: Int) -> String {
         let squareColour = (square.rank + square.file) % 2 == 0 ? "B" : "W"
         return {
             let owner = piece.owner
             let type = piece.type
             switch type {
-            case .king:
-                return playerColour(owner!) + "K"
-            case .queen:
-                return playerColour(owner!) + "Q"
-            case .rook:
-                return playerColour(owner!) + "R"
-            case .bishop:
-                return playerColour(owner!) + "B"
-            case .knight:
-                return playerColour(owner!) + "N"
-            case .pawn:
-                return playerColour(owner!) + "P"
-            case .none:
+            case King:
+                return playerColour(owner) + "K"
+            case Queen:
+                return playerColour(owner) + "Q"
+            case Rook:
+                return playerColour(owner) + "R"
+            case Bishop:
+                return playerColour(owner) + "B"
+            case Knight:
+                return playerColour(owner) + "N"
+            case Pawn:
+                return playerColour(owner) + "P"
+            default:
                 return "E"
             }
         }() + squareColour
         
-        func playerColour(_ player: Player) -> String {
+        func playerColour(_ player: EngPlayer) -> String {
             switch player {
-            case .white: return "W"
-            case .black: return "B"
+            case White: return "W"
+            case Black: return "B"
+            default: return "E"
             }
         }
     }
